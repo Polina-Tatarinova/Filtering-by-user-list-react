@@ -1,0 +1,119 @@
+/* Сетка карточек */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Карточка */
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+  border: 1px solid #f0f2f5;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.18);
+  border-color: #e0e7ff;
+}
+
+/* Заголовок */
+.card-title {
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Email */
+.card-email {
+  margin: 8px 0;
+  color: #3b82f6;
+  font-weight: 500;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+/* Город */
+.card-city {
+  margin: 8px 0 0;
+  color: #475569;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-city::before {
+  content: "📍";
+  font-size: 0.8rem;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 640px) {
+  .cards-grid {
+    gap: 16px;
+    padding: 16px;
+  }
+  .card {
+    padding: 16px;
+  }
+}
+
+/* Контейнер для строки поиска – оберните input и button в div с этим классом */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto 30px;
+  padding: 0 16px;
+  max-width: 600px;
+}
+
+/* Поле ввода */
+.search-input {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 40px;
+  outline: none;
+  transition: all 0.2s ease;
+  background: white;
+  color: #1e293b;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Кнопка */
+.search-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.search-button:active {
+  transform: translateY(0);
+}
